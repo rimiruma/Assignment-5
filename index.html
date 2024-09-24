@@ -19,7 +19,7 @@
 </head>
 <body>
   
-    <nav class="">
+    <nav class="-mt-10 fixed h-20 w-full">
         <div class="navbar bg-orange-50">
             <div class="navbar-start">
               <div class="dropdown">
@@ -45,7 +45,7 @@
                   <li><a>Item 3</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl bg-lime-300">Blog</a>
+              <a id="blog" class="btn btn-ghost text-xl font-bold bg-lime-300">Blog</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal px-1">
@@ -70,16 +70,17 @@
     <div class="divider"></div>
 <main>
   <div class="flex justify-center gap-5 mt-20">
-    <button class="btn btn-active btn-secondary">Donation</button>
-    <button class="btn btn-active btn-secondary">History</button>
+    <button id="donation-add-money" class="btn btn-active text-gray-600  bg-lime-400 font-bold">Donation</button>
+    <button id="history-button" class="btn btn-active text-black">History</button>
   </div>
   <section class="mt-20 px-5 image-container">
-    <div class="flex justify-center -mb-5 gap-3">
+    <div class="flex justify-center -mb-10 ml-16 gap-3">
       <div>
         <img src="assets/coin.png" alt="">
       </div>
       <div>
-        <span>0 BDT</span>
+        <span id="current-balance">500</span>
+        <span>BDT</span>
       </div>
     </div>
     
@@ -88,13 +89,13 @@
         <img src="assets/noakhali.png" alt="">
       </div>
         <div class="w-1/2 mt-10">
-          <h2 class="font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h2>
+          <h2 class="font-bold text-xl mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
           <p class="mt-4">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-          <div class="form-control mt-5">
-            <input id="donation-amount" type="email" placeholder="Write Donation Amount" class="input input-bordered" required />
+          <div class="form-control mt-14">
+            <input id="amount-input" type="email" placeholder="Write Donation Amount" class="input input-bordered" required />
           </div>
-          <div class="mt-5">
-            <button id="btn-donate now" class=" bg-lime-300 px-64 p-4">Donate Now</button>
+          <div class="mt-5 text-center">
+            <button id="btn-donate now" class=" bg-lime-300 px-40 p-3">Donate Now</button>
           </div>
         </div> 
     </div>
