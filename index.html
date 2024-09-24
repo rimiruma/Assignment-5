@@ -63,7 +63,7 @@
               <div>
                 <img src="assets/coin.png" alt="">
               </div>
-              <div><span>5500</span></div>
+              <div><span id="total-amount">5500</span></div>
             </div>
           </div>
     </nav>
@@ -73,13 +73,13 @@
     <button id="donation-add-money" class="btn btn-active text-gray-600  bg-lime-400 font-bold">Donation</button>
     <button id="history-button" class="btn btn-active text-black">History</button>
   </div>
-  <section class="mt-20 px-5 image-container">
+  <section id="update-button" class="mt-20 px-5 image-container">
     <div class="flex justify-center -mb-10 ml-16 gap-3">
       <div>
         <img src="assets/coin.png" alt="">
       </div>
       <div>
-        <span id="current-balance">500</span>
+        <span id="donation-amount">500</span>
         <span>BDT</span>
       </div>
     </div>
@@ -92,10 +92,24 @@
           <h2 class="font-bold text-xl mt-4">Donate for Flood at Noakhali, Bangladesh</h2>
           <p class="mt-4">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
           <div class="form-control mt-14">
-            <input id="amount-input" type="email" placeholder="Write Donation Amount" class="input input-bordered" required />
+            <input id="input-field" type="email" placeholder="Write Donation Amount" class="input input-bordered" required />
           </div>
           <div class="mt-5 text-center">
-            <button id="btn-donate now" class=" bg-lime-300 px-40 p-3">Donate Now</button>
+            <!-- <button id="btn-donate now" class=" bg-lime-300 px-40 p-3">Donate Now</button> -->
+             <!-- Open the modal using ID.showModal() method -->
+<button id="donation-button" class="btn bg-lime-300" onclick="my_modal_1.showModal()">open modal</button>
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
           </div>
         </div> 
     </div>
