@@ -49,6 +49,43 @@ document.addEventListener('DOMContentLoaded', function(){
     })
 })
 
+// section donation amount
+
+document.getElementById('DOMContainerLoaded', function(){
+    const updateTotalAmountElement = document.getElementById('total-amount');
+    const inputDonation = document.addEventListener('input-donation');
+    const currentAccountButton = document.getElementById('current-account-button');
+    const newDonationElement = document.getElementById('new-donation');
+
+    let newTotalAmount = parseFloat(updateTotalAmountElement.textContent);
+    let currentDonationAmount = parseFloat(newDonationElement.textContent);
+
+    currentAccountButton.addEventListener('click', function(){
+        const newInputValue = parseFloat(inputDonation.value);
+
+        if(!isNaN(newInputValue) && newInputValue > 0 && newInputValue <= newTotalAmount){
+            newTotalAmount -= newInputValue;
+            updateTotalAmountElement.textContent = `${newTotalAmount}`;
+
+            currentDonationAmount += newInputValue;
+            newDonationElement.textContent = `${currentDonationAmount}`;
+
+            inputDonation.value = '';
+
+            // my_modal_2.showModal();
+        }
+        else{
+            alert('please enter a valid amount that is less than or equal to the available total.')
+        }
+        // my_modal_2.display = 'block';
+})
+})
+
+
+
+
+
+
 document.getElementById('blog').addEventListener('click', function(event){
     event.preventDefault();
     window.location.href = '/home.html';
