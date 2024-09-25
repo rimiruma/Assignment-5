@@ -20,7 +20,8 @@
 //    }
     
 // })
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('click', function(){
+// donationButton.addEventListener('click', function(){
     const totalAmountElement = document.getElementById('total-amount');
     const inputField = document.getElementById('input-field');
     const donationButton = document.getElementById('donation-button');
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     let totalAmount = parseFloat(totalAmountElement.textContent);
     let currentDonationAmount = parseFloat(donationAmountElement.textContent);
-    donationButton.addEventListener('click', function(){
+    // donationButton.addEventListener('click', function(){
         const inputValue = parseFloat(inputField.value);
 
         if(!isNaN(inputValue) && inputValue > 0 && inputValue <= totalAmount){
@@ -42,26 +43,20 @@ document.addEventListener('DOMContentLoaded', function(){
 
             my_modal_1.showModal();
         }
-        else{
-            alert('please enter a valid amount that is less than or equal to the available total.')
-        }
+        // else{
+        //     alert('please enter a valid amount that is less than or equal to the available total.')
+        // }
         my_modal_1.display = 'block';
     })
-})
 
 // section donation amount
-
-document.getElementById('DOMContainerLoaded', function(){
+document.getElementById('current-account-button').addEventListener('click', function(){
     const updateTotalAmountElement = document.getElementById('total-amount');
-    const inputDonation = document.addEventListener('input-donation');
-    const currentAccountButton = document.getElementById('current-account-button');
+    const inputDonation = document.getElementById('input-donation');
     const newDonationElement = document.getElementById('new-donation');
-
     let newTotalAmount = parseFloat(updateTotalAmountElement.textContent);
     let currentDonationAmount = parseFloat(newDonationElement.textContent);
-
-    currentAccountButton.addEventListener('click', function(){
-        const newInputValue = parseFloat(inputDonation.value);
+    const newInputValue = parseFloat(inputDonation.value);
 
         if(!isNaN(newInputValue) && newInputValue > 0 && newInputValue <= newTotalAmount){
             newTotalAmount -= newInputValue;
@@ -69,17 +64,15 @@ document.getElementById('DOMContainerLoaded', function(){
 
             currentDonationAmount += newInputValue;
             newDonationElement.textContent = `${currentDonationAmount}`;
-
             inputDonation.value = '';
+        }
+        // else{
+        //     alert('please enter a valid amount that is less than or equal to the available total.')
+        // }
+})
 
-            // my_modal_2.showModal();
-        }
-        else{
-            alert('please enter a valid amount that is less than or equal to the available total.')
-        }
-        // my_modal_2.display = 'block';
-})
-})
+   
+
 
 
 
