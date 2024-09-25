@@ -88,7 +88,7 @@ document.getElementById('DOMContainerLoaded', function(){
 
 document.getElementById('blog').addEventListener('click', function(event){
     event.preventDefault();
-    window.location.href = '/home.html';
+    window.location.href = '/Assignment-5/home.html';
 })
 
 // history button functionality
