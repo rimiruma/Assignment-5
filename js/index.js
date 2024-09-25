@@ -1,25 +1,4 @@
-// document.getElementById('btn-donate now').addEventListener('click', function(event){
-//     event.preventDefault();
-//     console.log('login button clicked');
-//     const AmountDonation = document.getElementById('amount-input').value;
-//     console.log(AmountDonation)
 
-    // if(AmountDonation === ' + '){
-    // console.log('your are logged in');
-    // const balance = document.getElementById('current-balance').innerText;
-    // console.log(balance);
-    //     const addMoneyNumber = parseFloat(AmountDonation)
-    //     const balanceNumber = parseFloat(balance)
-    //     const newBalance = addMoneyNumber + balanceNumber;
-        // console.log(newBalance);
-
-//         document.getElementById('current-balance').innerText = newBalance; 
-//     }
-//    else{
-//     alert('Invalid Donation Amount')
-//    }
-    
-// })
 document.addEventListener('click', function(){
 // donationButton.addEventListener('click', function(){
     const totalAmountElement = document.getElementById('total-amount');
@@ -70,14 +49,6 @@ document.getElementById('current-account-button').addEventListener('click', func
         //     alert('please enter a valid amount that is less than or equal to the available total.')
         // }
 })
-
-   
-
-
-
-
-
-
 
 document.getElementById('blog').addEventListener('click', function(event){
     event.preventDefault();
